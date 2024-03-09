@@ -5,9 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Care_Agent extends Model
+class CareAgent extends Model
 {
     use HasFactory;
-    protected $table = 'care_agents';
-    protected $fillable = ['GSTIN_number','certificate_url'];
+    protected $table = 'careagents';
+    protected $fillable = ['gstin_number','certificate_url'];
 }

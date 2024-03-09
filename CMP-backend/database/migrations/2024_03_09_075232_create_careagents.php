@@ -11,11 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('care_agents', function (Blueprint $table) {
+        Schema::create('careagents', function (Blueprint $table) {
             $table->unsignedBigInteger('id');
             $table->foreign('id')->references('id')->on('users')->onDelete('cascade');
 
-            $table->string('GSTIN_number')->nullable();
+            $table->string('gstin_number')->nullable();
             $table->string('certificate_url')->nullable();
 
             $table->unsignedBigInteger('address_id');
@@ -30,6 +30,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('care_agent');
+        Schema::dropIfExists('careagents');
     }
 };

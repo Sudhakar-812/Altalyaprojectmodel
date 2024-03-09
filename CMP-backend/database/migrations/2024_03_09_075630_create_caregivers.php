@@ -11,11 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('care_givers', function (Blueprint $table) {
+        Schema::create('caregivers', function (Blueprint $table) {
             $table->unsignedBigInteger('id');
             $table->foreign('id')->references('id')->on('users')->onDelete('cascade');
 
-            $table->date('DOB');
+            $table->date('dob');
             $table->integer('sal_expectation')->nullable();
             $table->string('education')->nullable();
             $table->string('degree')->nullable();
@@ -41,6 +41,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('care_givers');
+        Schema::dropIfExists('caregivers');
     }
 };
